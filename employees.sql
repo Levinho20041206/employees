@@ -1,15 +1,15 @@
 -- 1 Ex
-SET search_path = my_schema, "$user", salesordersexample;
--- SELECT employeeid, empfirstname, empstreetaddress, empcity
--- FROM employees
+-- SELECT e.ID, e.person_name, city
+-- FROM employee AS e, works AS w
+-- WHERE w.company_name = 'First Bank Corporation' AND w.ID = e.ID
 
 -- 2 Ex
--- SET search_path = my_schema, "$user", schoolschedulingexample;
--- SELECT staffid, stffirstname, stfstreetaddress 
--- FROM staff
--- WHERE salary > (10000)
+-- SELECT e.ID, e.person_name, city 
+-- FROM employee AS e, works AS w
+-- WHERE w.company_name = 'First Bank Corporation' AND w.ID = e.ID
+--       AND w.salary > 10000
 
 -- 3 Ex
--- SELECT *
--- FROM employees
--- WHERE employeeid IS NOT NULL;
+-- SELECT ID
+-- FROM works
+-- WHERE companiy_name <> 'First Bank Corporation'
